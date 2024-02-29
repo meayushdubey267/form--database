@@ -27,7 +27,7 @@
 
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item active display-6  " id="nav">
+            <li class="nav-item active display-6" id="nav">
                 <a class="nav-link mx-auto"  href="/">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item active display-6 " id="nav">
@@ -52,40 +52,43 @@
     <form action="/" method="POST" class="row g-3 w-50 mt-2 mx-auto " style="padding: 20px;
     margin: 5px;
     border: 2px solid black;
-    border-radius: 10px">
+    border-radius: 10px" onsubmit="updateObject(event)">
         <div class="col-md-6 d-inline">
             <label for="inputEmail4" class="form-label" id="input1">Name</label>
-            <input type="text" class="form-control" style ="width:100%;" id="inputEmail4" name="name" placeholder="Enter your name">
+            <input type="text" class="form-control" style ="width:100%;" id="input1" name="name" placeholder="Enter your name">
         </div>
         <div class="col-md-6">
-            <label for="inputEmail4" class="form-label"  >Contact</label>
-            <input type="number" class="form-control" style="width: 100%;" id="inputEmail4" name="contact" placeholder="Enter your Contact">
+            <label for="inputEmail4" class="form-label"  id="input2" >Contact</label>
+            <input type="number" class="form-control" style="width: 100%;" name="contact" placeholder="Enter your Contact">
         </div>
-        <div class="col-md-6" id="input">
-            <label for="inputEmail4" class="form-label" >Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your Email">
+        <div class="col-md-12" id="input">
+            <label for="inputEmail4" class="form-label" id="input3">Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Enter your Email">
         </div>
+        
 
         <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
+            <label for="inputAddress" class="form-label" id="input4">Address</label>
+            <input type="text" class="form-control"  placeholder="1234 Main St" name="address">
         </div>
         
 
 
         <div class="input-group col-12">
-            <span class="form-label " style="font-weight: bolder;">Message</span>
+            <span class="form-label" id="input5" style="font-weight: bolder;">Message</span>
             <textarea class="form-control" aria-label="With textarea" name="message"></textarea>
         </div>
         <div class="btn">
             <button type="submit" class="text-center btn btn-primary">Submit</button>
         </div>
     </form>
-
-
     
+
+
+    <script src="server.js"></script>
     <script src="../jq/jquery.js" type="text/javascript"></script>
     <script src="../js/bootstrap.js" type="text/javascript"></script>
+    
 </body>
 
 </html>
